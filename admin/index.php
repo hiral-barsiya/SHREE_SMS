@@ -70,7 +70,7 @@ if (
         }
 
         .dashboard-grid .btn-warning {
-          background: #f59e42;
+          background: red;
           border: none;
           color: #fff;
         }

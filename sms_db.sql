@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2025 at 04:54 PM
+-- Generation Time: Sep 24, 2025 at 03:28 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -62,10 +62,16 @@ CREATE TABLE `attendance` (
 --
 
 INSERT INTO `attendance` (`attendance_id`, `student_id`, `date`, `status`, `section_id`) VALUES
-(1, 6, '2025-09-12', 'Absent', 2),
-(2, 6, '2025-09-11', 'Present', 2),
-(3, 8, '2025-09-19', 'Present', 1),
-(4, 6, '2025-09-20', 'Absent', 2);
+(1, 1, '2025-09-24', 'Absent', 1),
+(2, 2, '2025-09-24', 'Present', 1),
+(3, 3, '2025-09-24', 'Present', 1),
+(4, 4, '2025-09-24', 'Present', 1),
+(5, 5, '2025-09-24', 'Present', 1),
+(6, 6, '2025-09-24', 'Present', 1),
+(7, 7, '2025-09-24', 'Present', 1),
+(8, 8, '2025-09-24', 'Present', 1),
+(9, 9, '2025-09-24', 'Present', 1),
+(10, 10, '2025-09-24', 'Present', 1);
 
 -- --------------------------------------------------------
 
@@ -133,8 +139,8 @@ CREATE TABLE `section` (
 INSERT INTO `section` (`section_id`, `section`) VALUES
 (1, '11-A'),
 (2, '11-B'),
-(7, '12-A'),
-(8, '12-B');
+(3, '12-A'),
+(4, '12-B');
 
 -- --------------------------------------------------------
 
@@ -189,11 +195,46 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`student_id`, `roll_no`, `username`, `password`, `fname`, `lname`, `section`, `address`, `gender`, `caste`, `mobile_number`, `email_address`, `date_of_birth`, `date_of_joined`, `parent_fname`, `parent_lname`, `parent_phone_number`) VALUES
-(6, '1', 'hiral', '123456', 'hiral', 'barsiya', 2, 'no address', 'Female', 'hindu', '787872157', 'hir2@gmail.com', '1996-06-21', '2025-08-24 05:07:35', 'barsiya', 'manishbhai', '08204515402'),
-(7, '2', 'devangi', '123456', 'Devangi', 'Pipaliya', 7, 'no address', 'Female', 'hindu', '877654378', 'devangi@gmail.com', '2006-02-22', '2025-08-26 04:37:06', 'Devangi', 'Pipaliya', '08200715402'),
-(8, NULL, 'palak', '123456', 'palak', 'pansuriya', 1, 'Rajkot', 'Female', 'hindu', '9874565747', 'palak@gmail.com', '2006-09-05', '2025-09-12 05:52:56', 'bipinbhai', 'pansuriya', '12345698'),
-(9, NULL, 'riya', '123456', 'riya', 'bhatt', 8, 'rajkot', 'Female', 'hindu', '0820071545', 'riya@gmail.com', '2006-05-05', '2025-09-19 22:03:22', 'bhavin ', 'bhatt', '522154666'),
-(10, '1', 'khushi', '123456', 'khushi', 'Pipaliya', 7, 'no address', 'Female', 'patel', '9874568546', 'khushi@gmail.com', '2018-02-19', '2025-09-19 23:12:52', 'mukeshbhai', 'pipaliya', '9587465261');
+(1, '1', 'rahul@1_1', '1234', 'Rahul', 'Sharma', 1, 'Ahmedabad', 'Male', 'General', '9876543210', 'rahul1@example.com', '2010-05-15', '2025-09-24 12:34:38', 'Ramesh', 'Sharma', '9876500011'),
+(2, '2', 'priya@1_2', '1234', 'Priya', 'Patel', 1, 'Surat', 'Female', 'OBC', '9876543211', 'priya1@example.com', '2011-02-10', '2025-09-24 12:34:38', 'Kiran', 'Patel', '9876500012'),
+(3, '3', 'amit@1_3', '1234', 'Amit', 'Verma', 1, 'Vadodara', 'Male', 'SC', '9876543212', 'amit1@example.com', '2010-08-22', '2025-09-24 12:34:38', 'Suresh', 'Verma', '9876500013'),
+(4, '4', 'neha@1_4', '1234', 'Neha', 'Mehta', 1, 'Rajkot', 'Female', 'General', '9876543213', 'neha1@example.com', '2011-11-30', '2025-09-24 12:34:38', 'Mahesh', 'Mehta', '9876500014'),
+(5, '5', 'anil@1_5', '1234', 'Anil', 'Rao', 1, 'Bhavnagar', 'Male', 'OBC', '9876543214', 'anil1@example.com', '2010-01-05', '2025-09-24 12:34:38', 'Raghav', 'Rao', '9876500015'),
+(6, '6', 'pallavi@1_6', '1234', 'Pallavi', 'Joshi', 1, 'Jamnagar', 'Female', 'General', '9876543215', 'pallavi1@example.com', '2011-07-18', '2025-09-24 12:34:38', 'Vishal', 'Joshi', '9876500016'),
+(7, '7', 'deepak@1_7', '1234', 'Deepak', 'Kumar', 1, 'Anand', 'Male', 'ST', '9876543216', 'deepak1@example.com', '2010-03-12', '2025-09-24 12:34:38', 'Mohan', 'Kumar', '9876500017'),
+(8, '8', 'sonali@1_8', '1234', 'Sonali', 'Thakur', 1, 'Nadiad', 'Female', 'OBC', '9876543217', 'sonali1@example.com', '2011-09-08', '2025-09-24 12:34:38', 'Rajesh', 'Thakur', '9876500018'),
+(9, '9', 'vikas@1_9', '1234', 'Vikas', 'Gupta', 1, 'Gandhinagar', 'Male', 'General', '9876543218', 'vikas1@example.com', '2010-06-20', '2025-09-24 12:34:38', 'Naresh', 'Gupta', '9876500019'),
+(10, '10', 'ritu@1_10', '1234', 'Ritu', 'Yadav', 1, 'Bhuj', 'Female', 'OBC', '9876543219', 'ritu1@example.com', '2011-12-25', '2025-09-24 12:34:38', 'Prakash', 'Yadav', '9876500020'),
+(11, '1', 'arjun@2_1', '1234', 'Arjun', 'Shah', 2, 'Ahmedabad', 'Male', 'General', '9876543220', 'arjun2@example.com', '2010-04-02', '2025-09-24 12:34:38', 'Paresh', 'Shah', '9876500021'),
+(12, '2', 'kavya@2_2', '1234', 'Kavya', 'Nair', 2, 'Surat', 'Female', 'OBC', '9876543221', 'kavya2@example.com', '2011-01-14', '2025-09-24 12:34:38', 'Satish', 'Nair', '9876500022'),
+(13, '3', 'rohit@2_3', '1234', 'Rohit', 'Reddy', 2, 'Vadodara', 'Male', 'SC', '9876543222', 'rohit2@example.com', '2010-09-19', '2025-09-24 12:34:38', 'Harish', 'Reddy', '9876500023'),
+(14, '4', 'sneha@2_4', '1234', 'Sneha', 'Kapoor', 2, 'Rajkot', 'Female', 'General', '9876543223', 'sneha2@example.com', '2011-10-23', '2025-09-24 12:34:38', 'Manish', 'Kapoor', '9876500024'),
+(15, '5', 'akash@2_5', '1234', 'Akash', 'Mishra', 2, 'Bhavnagar', 'Male', 'OBC', '9876543224', 'akash2@example.com', '2010-12-11', '2025-09-24 12:34:38', 'Vikas', 'Mishra', '9876500025'),
+(16, '6', 'meera@2_6', '1234', 'Meera', 'Desai', 2, 'Jamnagar', 'Female', 'General', '9876543225', 'meera2@example.com', '2011-05-07', '2025-09-24 12:34:38', 'Dilip', 'Desai', '9876500026'),
+(17, '7', 'sanjay@2_7', '1234', 'Sanjay', 'Bansal', 2, 'Anand', 'Male', 'ST', '9876543226', 'sanjay2@example.com', '2010-02-28', '2025-09-24 12:34:38', 'Ashok', 'Bansal', '9876500027'),
+(18, '8', 'divya@2_8', '1234', 'Divya', 'Chopra', 2, 'Nadiad', 'Female', 'OBC', '9876543227', 'divya2@example.com', '2011-06-30', '2025-09-24 12:34:38', 'Rajiv', 'Chopra', '9876500028'),
+(19, '9', 'karan@2_9', '1234', 'Karan', 'Iyer', 2, 'Gandhinagar', 'Male', 'General', '9876543228', 'karan2@example.com', '2010-07-13', '2025-09-24 12:34:38', 'Sanjay', 'Iyer', '9876500029'),
+(20, '10', 'anjali@2_10', '1234', 'Anjali', 'Pillai', 2, 'Bhuj', 'Female', 'OBC', '9876543229', 'anjali2@example.com', '2011-03-21', '2025-09-24 12:34:38', 'Anand', 'Pillai', '9876500030'),
+(21, '1', 'manish@3_1', '1234', 'Manish', 'Singh', 3, 'Ahmedabad', 'Male', 'General', '9876543230', 'manish3@example.com', '2010-09-10', '2025-09-24 12:34:38', 'Rakesh', 'Singh', '9876500031'),
+(22, '2', 'riya@3_2', '1234', 'Riya', 'Sharma', 3, 'Surat', 'Female', 'OBC', '9876543231', 'riya3@example.com', '2011-11-12', '2025-09-24 12:34:38', 'Mukesh', 'Sharma', '9876500032'),
+(23, '3', 'sahil@3_3', '1234', 'Sahil', 'Patel', 3, 'Vadodara', 'Male', 'SC', '9876543232', 'sahil3@example.com', '2010-02-03', '2025-09-24 12:34:38', 'Nilesh', 'Patel', '9876500033'),
+(24, '4', 'aarti@3_4', '1234', 'Aarti', 'Mehra', 3, 'Rajkot', 'Female', 'General', '9876543233', 'aarti3@example.com', '2011-08-29', '2025-09-24 12:34:38', 'Pradeep', 'Mehra', '9876500034'),
+(25, '5', 'naman@3_5', '1234', 'Naman', 'Jain', 3, 'Bhavnagar', 'Male', 'OBC', '9876543234', 'naman3@example.com', '2010-06-17', '2025-09-24 12:34:38', 'Rajesh', 'Jain', '9876500035'),
+(26, '6', 'swati@3_6', '1234', 'Swati', 'Saxena', 3, 'Jamnagar', 'Female', 'General', '9876543235', 'swati3@example.com', '2011-01-27', '2025-09-24 12:34:38', 'Girish', 'Saxena', '9876500036'),
+(27, '7', 'ajay@3_7', '1234', 'Ajay', 'Thakur', 3, 'Anand', 'Male', 'ST', '9876543236', 'ajay3@example.com', '2010-10-14', '2025-09-24 12:34:38', 'Ravi', 'Thakur', '9876500037'),
+(28, '8', 'poonam@3_8', '1234', 'Poonam', 'Yadav', 3, 'Nadiad', 'Female', 'OBC', '9876543237', 'poonam3@example.com', '2011-04-05', '2025-09-24 12:34:38', 'Ramesh', 'Yadav', '9876500038'),
+(29, '9', 'alok@3_9', '1234', 'Alok', 'Verma', 3, 'Gandhinagar', 'Male', 'General', '9876543238', 'alok3@example.com', '2010-12-19', '2025-09-24 12:34:38', 'Anil', 'Verma', '9876500039'),
+(30, '10', 'jyoti@3_10', '1234', 'Jyoti', 'Gupta', 3, 'Bhuj', 'Female', 'OBC', '9876543239', 'jyoti3@example.com', '2011-07-22', '2025-09-24 12:34:38', 'Vikas', 'Gupta', '9876500040'),
+(31, '1', 'vivek@4_1', '1234', 'Vivek', 'Rana', 4, 'Ahmedabad', 'Male', 'General', '9876543240', 'vivek4@example.com', '2010-05-18', '2025-09-24 12:34:38', 'Arun', 'Rana', '9876500041'),
+(32, '2', 'nisha@4_2', '1234', 'Nisha', 'Chauhan', 4, 'Surat', 'Female', 'OBC', '9876543241', 'nisha4@example.com', '2011-02-25', '2025-09-24 12:34:38', 'Mahesh', 'Chauhan', '9876500042'),
+(33, '3', 'yash@4_3', '1234', 'Yash', 'Agarwal', 4, 'Vadodara', 'Male', 'SC', '9876543242', 'yash4@example.com', '2010-11-04', '2025-09-24 12:34:38', 'Pramod', 'Agarwal', '9876500043'),
+(34, '4', 'sakshi@4_4', '1234', 'Sakshi', 'Bhatt', 4, 'Rajkot', 'Female', 'General', '9876543243', 'sakshi4@example.com', '2011-06-09', '2025-09-24 12:34:38', 'Sunil', 'Bhatt', '9876500044'),
+(35, '5', 'mohit@4_5', '1234', 'Mohit', 'Rastogi', 4, 'Bhavnagar', 'Male', 'OBC', '9876543244', 'mohit4@example.com', '2010-08-15', '2025-09-24 12:34:38', 'Ramesh', 'Rastogi', '9876500045'),
+(36, '6', 'pooja@4_6', '1234', 'Pooja', 'Tiwari', 4, 'Jamnagar', 'Female', 'General', '9876543245', 'pooja4@example.com', '2011-09-01', '2025-09-24 12:34:38', 'Dinesh', 'Tiwari', '9876500046'),
+(37, '7', 'tarun@4_7', '1234', 'Tarun', 'Malik', 4, 'Anand', 'Male', 'ST', '9876543246', 'tarun4@example.com', '2010-03-08', '2025-09-24 12:34:38', 'Kailash', 'Malik', '9876500047'),
+(38, '8', 'kiran@4_8', '1234', 'Kiran', 'Bhatia', 4, 'Nadiad', 'Female', 'OBC', '9876543247', 'kiran4@example.com', '2011-12-16', '2025-09-24 12:34:38', 'Suresh', 'Bhatia', '9876500048'),
+(39, '9', 'suresh@4_9', '1234', 'Suresh', 'Pawar', 4, 'Gandhinagar', 'Male', 'General', '9876543248', 'suresh4@example.com', '2010-01-23', '2025-09-24 12:34:38', 'Vinod', 'Pawar', '9876500049'),
+(40, '10', 'anjum@4_10', '1234', 'Anjum', 'Sheikh', 4, 'Bhuj', 'Female', 'OBC', '9876543249', 'anjum4@example.com', '2011-10-27', '2025-09-24 12:34:38', 'Imran', 'Sheikh', '9876500050');
 
 --
 -- Indexes for dumped tables
@@ -260,7 +301,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `attendance_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `attendance_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `message`
@@ -278,7 +319,7 @@ ALTER TABLE `result`
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `section_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `setting`
@@ -290,7 +331,7 @@ ALTER TABLE `setting`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- Constraints for dumped tables

@@ -156,7 +156,7 @@ if (isset($_SESSION['admin_id']) &&
                     <tr>
                       <th scope="col">#</th>
                       <th scope="col">Roll No</th>
-                      <th scope="col">ID</th>
+                 
                       <th scope="col">First Name</th>
                       <th scope="col">Last Name</th>
                       <th scope="col">Username</th>
@@ -171,7 +171,7 @@ if (isset($_SESSION['admin_id']) &&
                     <tr>
                       <th scope="row"><?=$i?></th>
                       <td><?=htmlspecialchars($student['roll_no'])?></td>
-                      <td><?=$student['student_id']?></td>
+                     
                       <td>
                         <a href="student-view.php?student_id=<?=$student['student_id']?>">
                           <?=$student['fname']?>
