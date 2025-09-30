@@ -73,7 +73,7 @@ if (isset($_POST['new_password'])) {
     <title>Reset Password</title>
     <style>
         body {
-            background: url(img/bg.jpg) no-repeat center center fixed;
+            background: url(img/back.jpg) no-repeat center center fixed;
             background-size: cover;
             font-family: 'Segoe UI', Arial, sans-serif;
             min-height: 100vh;
